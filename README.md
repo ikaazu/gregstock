@@ -1,3 +1,9 @@
 # Greg Stock
 
-Personal website and portfolio.
+This repository contains the source for my personal website and portfolio.
+
+Planned sections:
+- About
+- Projects
+- Blog
+- Contact
