@@ -395,6 +395,20 @@
       font-size: 1.35rem;
     }
 
+    .github-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      display: block;
+    }
+
+    .linkedin-icon {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      text-transform: lowercase;
+    }
+
     .card h3 {
       margin: 0 0 8px;
       font-size: 1.2rem;
