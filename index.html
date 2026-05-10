@@ -23,6 +23,19 @@
         <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="theme-controls" aria-label="Theme controls">
+        <label for="accentPicker">
+          Accent
+          <input type="color" id="accentPicker" value="#64d2ff">
+        </label>
+        <label for="accentTwoPicker">
+          Accent 2
+          <input type="color" id="accentTwoPicker" value="#f7b955">
+        </label>
+        <button type="button" id="darkModeButton">Dark</button>
+        <button type="button" id="lightModeButton">Light</button>
+        <button type="button" id="resetThemeButton">Reset</button>
+      </div>
     </div>
   </header>
 
@@ -179,6 +192,81 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const accentPicker = document.getElementById('accentPicker');
+    const accentTwoPicker = document.getElementById('accentTwoPicker');
+    const darkModeButton = document.getElementById('darkModeButton');
+    const lightModeButton = document.getElementById('lightModeButton');
+    const resetThemeButton = document.getElementById('resetThemeButton');
+
+    const defaultTheme = {
+      mode: 'dark',
+      accent: '#64d2ff',
+      accentTwo: '#f7b955'
+    };
+
+    function hexToRgb(hex) {
+      const cleanHex = hex.replace('#', '');
+      const value = parseInt(cleanHex, 16);
+      return `${(value >> 16) & 255}, ${(value >> 8) & 255}, ${value & 255}`;
+    }
+
+    function getSavedTheme() {
+      const savedTheme = localStorage.getItem('gregstockTheme');
+
+      if (!savedTheme) {
+        return defaultTheme;
+      }
+
+      try {
+        return { ...defaultTheme, ...JSON.parse(savedTheme) };
+      } catch {
+        return defaultTheme;
+      }
+    }
+
+    function applyTheme(theme) {
+      root.dataset.theme = theme.mode;
+      root.style.setProperty('--accent', theme.accent);
+      root.style.setProperty('--accent-2', theme.accentTwo);
+      root.style.setProperty('--accent-rgb', hexToRgb(theme.accent));
+      root.style.setProperty('--accent-2-rgb', hexToRgb(theme.accentTwo));
+
+      accentPicker.value = theme.accent;
+      accentTwoPicker.value = theme.accentTwo;
+
+      localStorage.setItem('gregstockTheme', JSON.stringify(theme));
+    }
+
+    let currentTheme = getSavedTheme();
+    applyTheme(currentTheme);
+
+    accentPicker.addEventListener('input', (event) => {
+      currentTheme = { ...currentTheme, accent: event.target.value };
+      applyTheme(currentTheme);
+    });
+
+    accentTwoPicker.addEventListener('input', (event) => {
+      currentTheme = { ...currentTheme, accentTwo: event.target.value };
+      applyTheme(currentTheme);
+    });
+
+    darkModeButton.addEventListener('click', () => {
+      currentTheme = { ...currentTheme, mode: 'dark' };
+      applyTheme(currentTheme);
+    });
+
+    lightModeButton.addEventListener('click', () => {
+      currentTheme = { ...currentTheme, mode: 'light' };
+      applyTheme(currentTheme);
+    });
+
+    resetThemeButton.addEventListener('click', () => {
+      currentTheme = { ...defaultTheme };
+      localStorage.removeItem('gregstockTheme');
+      applyTheme(currentTheme);
+    });
   </script>
 </body>
 </html>
