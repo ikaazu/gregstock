@@ -23,19 +23,6 @@
         <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
-      <div class="theme-controls" aria-label="Theme controls">
-        <label for="accentPicker">
-          Accent
-          <input type="color" id="accentPicker" value="#64d2ff">
-        </label>
-        <label for="accentTwoPicker">
-          Accent 2
-          <input type="color" id="accentTwoPicker" value="#f7b955">
-        </label>
-        <button type="button" id="darkModeButton">Dark</button>
-        <button type="button" id="lightModeButton">Light</button>
-        <button type="button" id="resetThemeButton">Reset</button>
-      </div>
     </div>
   </header>
 
@@ -185,7 +172,23 @@
   </main>
 
   <footer>
-    <div class="page-shell">
+    <div class="page-shell footer-inner">
+      <div class="theme-controls footer-theme-controls" aria-label="Theme controls">
+        <label for="accentPicker">
+          Accent
+          <input type="color" id="accentPicker" value="#64d2ff">
+        </label>
+
+        <label for="accentTwoPicker">
+          Accent 2
+          <input type="color" id="accentTwoPicker" value="#f7b955">
+        </label>
+
+        <button type="button" id="darkModeButton">Dark</button>
+        <button type="button" id="lightModeButton">Light</button>
+        <button type="button" id="resetThemeButton">Reset</button>
+      </div>
+
       <p>© <span id="year"></span> Greg Stock. Built with plain HTML, CSS, GitHub, and Cloudflare Pages.</p>
     </div>
   </footer>

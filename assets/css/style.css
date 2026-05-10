@@ -129,15 +129,16 @@
     .theme-controls {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
-      justify-content: flex-end;
       gap: 8px;
+      max-width: 100%;
     }
 
     .theme-controls label {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       padding: 6px 10px;
       border: 1px solid var(--card-border);
       border-radius: 999px;
@@ -461,6 +462,16 @@
       text-align: center;
     }
 
+    .footer-inner {
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
     @media (max-width: 860px) {
       .hero,
       .feature {
@@ -475,10 +486,6 @@
         display: block;
       }
 
-      .theme-controls {
-        justify-content: flex-start;
-      }
-
       .section-heading p {
         margin-top: 8px;
       }
@@ -486,13 +493,19 @@
 
     @media (max-width: 560px) {
       .nav {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
+        gap: 14px;
       }
 
-      .nav-links,
-      .theme-controls {
-        justify-content: flex-start;
+      .nav-links {
+        justify-content: center;
+        gap: 4px;
+      }
+
+      .nav-links a {
+        padding: 6px 8px;
+        font-size: 0.95rem;
       }
 
       main {
@@ -501,5 +514,14 @@
 
       .stat-grid {
         grid-template-columns: 1fr;
+      }
+
+      .theme-controls {
+        gap: 6px;
+      }
+
+      .theme-controls label,
+      .theme-controls button {
+        font-size: 0.8rem;
       }
     }
