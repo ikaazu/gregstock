@@ -374,8 +374,10 @@
       gap: 18px;
     }
 
-    #contact .card-grid {
-      grid-template-columns: repeat(4, 1fr);
+    @media (min-width: 861px) {
+      #contact .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .card {
@@ -429,7 +431,7 @@
     }
 
     .now-post {
-      max-width: 720px;
+      width: 100%;
     }
 
     .now-date {
