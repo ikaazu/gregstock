@@ -369,6 +369,10 @@
       gap: 18px;
     }
 
+    #contact .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     .card {
       padding: 22px;
       border: 1px solid var(--card-border);
