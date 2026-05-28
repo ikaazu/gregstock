@@ -341,6 +341,11 @@
 
     section {
       padding: 44px 0;
+      scroll-margin-top: 88px;
+    }
+
+    section + section {
+      border-top: 1px solid var(--card-border);
     }
 
     .section-heading {
