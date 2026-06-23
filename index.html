@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <meta name="theme-color" content="#0e1117">
+  <meta name="theme-color" content="#f5f7fb">
 </head>
 <body>
   <header>
@@ -184,12 +184,12 @@
       <div class="theme-controls footer-theme-controls" aria-label="Theme controls">
         <label for="accentPicker">
           Accent
-          <input type="color" id="accentPicker" value="#bde4f5">
+          <input type="color" id="accentPicker" value="#0e7eaf">
         </label>
 
         <label for="accentTwoPicker">
           Accent 2
-          <input type="color" id="accentTwoPicker" value="#056099">
+          <input type="color" id="accentTwoPicker" value="#b7cbd7">
         </label>
 
         <button type="button" id="darkModeButton">Dark</button>
@@ -213,9 +213,9 @@
     const resetThemeButton = document.getElementById('resetThemeButton');
 
     const defaultTheme = {
-      mode: "dark",
-      accent: "#bde4f5",
-      accentTwo: "#056099"
+      mode: "light",
+      accent: "#0e7eaf",
+      accentTwo: "#b7cbd7"
 }   ;
 
     function hexToRgb(hex) {
