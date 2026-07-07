@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Greg Stock | Technology, Writing, and Projects</title>
-  <meta name="description" content="Personal homepage for Greg Stock: technology, writing, tabletop RPGs, sports, and creative projects." />
+  <title>Greg Stock | Technology, Games, and Ideas</title>
+  <meta name="description" content="Personal homepage for Greg Stock: technology, tabletop RPGs, homelab, and creative projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <meta name="theme-color" content="#f5f7fb">
+  <meta name="theme-color" content="#0b0d12">
 </head>
 <body>
   <header>
@@ -20,24 +20,27 @@
         <span class="brand-mark">
           <img src="assets/images/favicon.png" alt="Greg Stock logo">
         </span>
-        <span>Greg Stock</span>
+        <span class="brand-text">
+          <span class="brand-name">Greg Stock</span>
+          <span class="brand-tagline">A personal archive of tech, games, and ideas.</span>
+        </span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#now">Now</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a><span class="nav-sep">|</span><a href="#now">Now</a><span class="nav-sep">|</span><a href="#projects">Projects</a><span class="nav-sep">|</span><a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+      </div>
     </div>
   </header>
 
   <main id="top" class="page-shell">
     <section class="hero" aria-label="Introduction">
       <div>
-        <div class="eyebrow"><span class="pulse"></span> Personal site now deploying through Cloudflare Pages</div>
+        <div class="eyebrow mono-label"><span class="pulse"></span> Personal site now deploying through Cloudflare Pages</div>
         <h1>Technology, creativity, and controlled chaos with a few <span class="gradient-text">side quests.</span></h1>
         <p class="hero-copy">
-           I work in tech. This site is everything else — stuff I'm building, writing, learning, and overthinking. Mostly personal, occasionally professional, and a place for small ideas to grow into something. The site itself is a permanent work in progress, so expect it to keep changing.
+          I work in tech. This site is everything else — stuff I'm building, writing, learning, and overthinking. Mostly personal, occasionally professional, and a place for small ideas to grow into something. The site itself is a permanent work in progress, so expect it to keep changing.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View projects</a>
@@ -45,11 +48,13 @@
         </div>
       </div>
 
-      <aside class="profile-card" aria-label="Profile card">
-        <div class="avatar">
-          <img src="assets/images/favicon.png" alt="Greg Stock logo">
+      <aside class="panel" aria-label="Profile card">
+        <div class="panel-top">
+          <h2>Hi, I'm Greg.</h2>
+          <div class="avatar-ring">
+            <img src="assets/images/greg-avatar.png" alt="Greg Stock">
+          </div>
         </div>
-        <h2>Hi, I’m Greg.</h2>
         <p>
           IT professional, technology nerd, tabletop RPG enthusiast, sports fan, and occasional dabbler in writing projects and documentation, based near Omaha, Nebraska.
         </p>
@@ -77,23 +82,23 @@
     <section id="about">
       <div class="section-heading">
         <h2>About this site</h2>
-        <p>Three sections: Technology, Creative Work, and Personal Projects. At any given time, something in each one is half-finished, just started, or somehow both — like this site itself.</p>
+        <p>IT troubleshooting notes, D&amp;D worldbuilding and campaign material, and the small web projects I build in my spare time — this site is where all three live.</p>
       </div>
       <div class="card-grid">
         <article class="card">
-          <div class="icon">⌘</div>
+          <div class="gauge">&#8984;</div>
           <h3>Technology</h3>
           <p>Notes and lessons from working with hardware, software, infrastructure, and the occasional mystery error that clearly chose violence.</p>
         </article>
-        <article class="card">
-          <div class="icon">✦</div>
+        <article class="card on-accent-2">
+          <div class="gauge">&#10022;</div>
           <h3>Creative work</h3>
           <p>Worldbuilding, character concepts, story notes, and tabletop RPG material collected in one place.</p>
         </article>
         <article class="card">
-          <div class="icon">◆</div>
+          <div class="gauge">&#9670;</div>
           <h3>Personal projects</h3>
-          <p>Small web experiments-like this page, design ideas, hobby notes, and useful resources I want to keep handy.</p>
+          <p>Small web experiments like this page, design ideas, hobby notes, and useful resources I want to keep handy.</p>
         </article>
       </div>
     </section>
@@ -101,46 +106,68 @@
     <section id="now">
       <div class="section-heading">
         <h2>Now</h2>
+        <p>A dated, semi-regular update on what I'm actively building — updated in place until there's enough for a new one.</p>
       </div>
-      <article class="now-post card">
-        <time class="now-date" datetime="2026-05-28">May 28, 2026</time>
-        <p>
-          The personal site has been the main focus lately. What started as a simple placeholder has been taking shape — new sections, cleaner navigation, and a clearer sense of what this site is actually for. Getting a personal homepage off the ground sounds straightforward until you're actually doing it, and it turns out there are a lot of small decisions that add up fast.
-        </p>
-        <p>
-          The projects section is live with Cyph3rfall as the first entry, and Argent Ledger holding a spot as work continues on it. A roadmap section captures what's on deck for the site, and the overall structure is starting to feel like something worth adding to rather than a placeholder waiting to become real.
-        </p>
-        <p>
-          On the Cyph3rfall side, active development continues on the app. More will surface here as things take shape.
-        </p>
+      <article class="card now-post">
+        <time class="mono-label" datetime="2026-07-07">July 7, 2026</time>
+        <p>Over the last month, gregstock.com has turned into exactly what I wanted it to be: a personal archive of tech, games, and ideas.</p>
+        <p>The site got a full visual overhaul with a new dark-first theme, a customizable glow effect, and a cleaner layout across the main pages. I rewrote the section copy so each part of the site now explains what actually lives there instead of leaning on generic filler text. The projects section also got reworked so it can grow beyond three entries without needing a redesign every time I add something new. Contact icons now use proper brand marks, and the whole site runs on a new type system that feels much more intentional.</p>
+        <p>Argent Ledger has taken a lot of my attention over the last few weeks. I&rsquo;ve been making steady progress on the character builder and working through the long list of features, structure, and design choices it still needs. It is not close to being ready for a proper public showing yet, but it is moving in the right direction. For now, it remains one of those slow-burn projects that keeps getting a little more real each time I sit down with it.</p>
+        <p>The homelab has been the other big focus. I picked up a second 42U rack, upgraded from a UniFi UDM Pro to a UDM Pro Max, and got a Dell R640 server standing up and running. That also led to plenty of side quests: iDRAC work, Proxmox planning, Windows VM setup, VirtIO drivers, storage upgrades, and the early stages of a larger home data center build-out. The next step is getting the new rack layout cleaned up and bringing the rest of the hardware into the plan.</p>
+        <p>I also spent time working through a self-hosted game server project for Dune: Awakening, which turned into a much deeper networking and virtualization rabbit hole than expected. Between Hyper-V, nested virtualization, k3s, shifting IP addresses, and Proxmox options, it became one of those projects where the &ldquo;simple install&rdquo; quietly wanders off into the woods and comes back wearing a Kubernetes helmet. I&rsquo;ll continue working on that over the next couple of weeks.</p>
+        <p>On the Cyph3rfall side, the macOS screensaver app is now at v2 and feels effectively done. I have also started poking at a Windows version, which will probably be the next piece to take shape. That project has been a fun mix of nostalgia and modernization, especially since it started from an old Windows XP-era utility I used years ago.</p>
+        <p>The Copper Piece Gang website has also started taking shape. That project is meant to become a home for our long-running D&amp;D campaign, with room for session summaries, character information, campaign notes, and lore. The basic framework is in place, and the next stretch will be about turning it from a shell into something useful for my Friday night D&amp;D group. After many years of play, this campaign deserves a proper corner of the web.</p>
+        <p>So, the short version: the site looks better, the project list is growing, Argent Ledger is moving forward, the homelab is becoming a real home data center, Cyph3rfall is starting to branch out, and Copper Piece Gang finally has the beginning of a proper campaign archive.</p>
+        <p>Not bad for a month or so of tinkering.</p>
       </article>
+      <a class="archive-link mono-label" href="previous-updates.html">View previous updates <span class="arrow">&#8594;</span></a>
     </section>
 
-
-<section id="projects">
+    <section id="projects">
       <div class="section-heading">
         <h2>Projects</h2>
-        <p>A collection of active and past projects — web apps, tools, and creative builds.</p>
+        <p>A cybersecurity-flavored app, a D&amp;D character builder, and a long-running campaign chronicle — three different projects, three different stages of done.</p>
       </div>
-      <div class="card-grid">
-        <a class="card" href="https://cyph3rfall.app" target="_blank" rel="noopener noreferrer" aria-label="Visit Cyph3rfall">
-          <div class="icon">
+      <div class="project-list">
+        <a class="project-row" href="https://cyph3rfall.app" target="_blank" rel="noopener noreferrer" aria-label="Visit Cyph3rfall">
+          <div class="gauge gauge-image">
             <img src="assets/images/cyph3rfall-favicon.png" alt="Cyph3rfall">
           </div>
-          <h3>Cyph3rfall</h3>
-          <p>Visit the project site at cyph3rfall.app.</p>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Cyph3rfall</h3>
+              <span class="status-chip is-live"><span class="status-dot"></span>Live</span>
+              <span class="type-chip mono-label">App</span>
+            </div>
+            <p>A cybersecurity-flavored app, live at cyph3rfall.app. The macOS screensaver is at v2 and effectively done, with a Windows version now underway.</p>
+          </div>
+          <div class="project-go mono-label">Visit <span class="arrow">&#8594;</span></div>
         </a>
-        <article class="card">
-          <div class="icon">02</div>
-          <h3>Argent Ledger</h3>
-          <p>A D&amp;D 4th Edition character builder built with Flutter. Currently in development.</p>
+        <article class="project-row on-accent-2">
+          <div class="gauge">&#9636;</div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Argent Ledger</h3>
+              <span class="status-chip"><span class="status-dot"></span>In development</span>
+              <span class="type-chip mono-label">App &middot; Flutter</span>
+            </div>
+            <p>A Dungeons &amp; Dragons 4th Edition character builder, built in Flutter/Dart. Currently mid-build — character sheets, compendium import, and full XML export are in progress.</p>
+          </div>
+          <div class="project-go mono-label">In progress <span class="arrow">&#8594;</span></div>
         </article>
-        <a class="card" href="https://copperpiecegang.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Copper Piece Gang">
-          <div class="icon">
+        <a class="project-row" href="https://copperpiecegang.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Copper Piece Gang">
+          <div class="gauge gauge-image">
             <img src="assets/images/cpg-favicon.png" alt="Copper Piece Gang">
           </div>
-          <h3>Copper Piece Gang</h3>
-          <p>A D&amp;D campaign site with session recaps, characters, and chronicles from a long-running Friday night game.</p>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Copper Piece Gang</h3>
+              <span class="status-chip is-live"><span class="status-dot"></span>Live</span>
+              <span class="type-chip mono-label">Campaign site</span>
+            </div>
+            <p>Session recaps, characters, NPCs, and locations from a long-running Friday night Dungeons &amp; Dragons campaign, established 2011.</p>
+          </div>
+          <div class="project-go mono-label">Visit <span class="arrow">&#8594;</span></div>
         </a>
       </div>
     </section>
@@ -148,34 +175,34 @@
     <section id="contact">
       <div class="section-heading">
         <h2>Contact</h2>
-        <p>A few useful links for my public projects, professional background, and direct contact.</p>
+        <p>Code and experiments on GitHub, day-to-day posts on Bluesky, my professional background on LinkedIn, or skip straight to email.</p>
       </div>
-      <div class="card-grid">
+      <div class="card-grid cols-4">
         <a class="card" href="https://github.com/ikaazu" target="_blank" rel="noopener noreferrer" aria-label="Visit Greg Stock on GitHub">
-        <div class="icon github-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img">
-        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.76 2.72 1.25 3.38.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98.01 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.19c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-        </svg>
-      </div>
-        <h3>GitHub</h3>
-        <p>Public projects, experiments, and site files.</p>
+          <div class="gauge">
+            <svg viewBox="0 0 24 24" role="img" aria-label="GitHub">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.76 2.72 1.25 3.38.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98.01 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.19c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+            </svg>
+          </div>
+          <h3>GitHub</h3>
+          <p>Public projects, experiments, and site files.</p>
         </a>
-        <a class="card" href="https://www.linkedin.com/in/gstock/" target="_blank" rel="noopener noreferrer" aria-label="Visit Greg Stock on LinkedIn">
-          <div class="icon linkedin-icon">in</div>
+        <a class="card on-accent-2" href="https://www.linkedin.com/in/gstock/" target="_blank" rel="noopener noreferrer" aria-label="Visit Greg Stock on LinkedIn">
+          <div class="gauge linkedin-mark">in</div>
           <h3>LinkedIn</h3>
           <p>My professional profile and work background.</p>
         </a>
         <a class="card" href="https://bsky.app/profile/gregstock.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Greg Stock on Bluesky">
-          <div class="icon bluesky-icon" aria-hidden="true">
-            <svg viewBox="0 0 640 640" role="img">
+          <div class="gauge">
+            <svg viewBox="0 0 640 640" role="img" aria-label="Bluesky">
               <path d="M439.8 358.7c-3.3-.4-6.7-.8-10-1.3c3.4.4 6.7.9 10 1.3M320 291.1c-26.1-50.7-97.1-145.2-163.1-191.8c-63.3-44.7-87.4-37-103.3-29.8C35.3 77.8 32 105.9 32 122.4S41.1 258 47 277.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3.5-6.6 1-10 1.4c-93.9 14-177.3 48.2-67.9 169.9C252.6 653.1 297.1 501.8 320 425.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4.4 6.7.9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7c5.9-19.9 15-138.9 15-155.5s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8c-66.1 46.6-137.1 141.1-163.2 191.8"/>
             </svg>
           </div>
           <h3>Bluesky</h3>
           <p>@gregstock.com</p>
         </a>
-        <a class="card" href="mailto:inquiry@gregstock.com" aria-label="Send an email to Greg Stock">
-          <div class="icon">✉</div>
+        <a class="card on-accent-2" href="mailto:inquiry@gregstock.com" aria-label="Send an email to Greg Stock">
+          <div class="gauge">&#9993;</div>
           <h3>Email</h3>
           <p>inquiry@gregstock.com</p>
         </a>
@@ -185,24 +212,8 @@
 
   <footer>
     <div class="page-shell footer-inner">
-      <div class="theme-controls footer-theme-controls" aria-label="Theme controls">
-        <label for="accentPicker">
-          Accent
-          <input type="color" id="accentPicker" value="#0e7eaf">
-        </label>
-
-        <label for="accentTwoPicker">
-          Accent 2
-          <input type="color" id="accentTwoPicker" value="#b7cbd7">
-        </label>
-
-        <button type="button" id="darkModeButton">Dark</button>
-        <button type="button" id="lightModeButton">Light</button>
-        <button type="button" id="resetThemeButton">Reset</button>
-      </div>
-
-      <p>© <span id="year"></span> Greg Stock. Built with plain HTML, CSS, GitHub, and Cloudflare Pages.</p>
-      <p>Last updated: May 2026</p>
+      <p>&copy; <span id="year"></span> Greg Stock. Built with plain HTML, CSS, GitHub, and Cloudflare Pages.</p>
+      <p>Last updated: July 2026</p>
     </div>
   </footer>
 
@@ -210,78 +221,18 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const root = document.documentElement;
-    const accentPicker = document.getElementById('accentPicker');
-    const accentTwoPicker = document.getElementById('accentTwoPicker');
-    const darkModeButton = document.getElementById('darkModeButton');
-    const lightModeButton = document.getElementById('lightModeButton');
-    const resetThemeButton = document.getElementById('resetThemeButton');
+    const themeToggle = document.getElementById('themeToggle');
 
-    const defaultTheme = {
-      mode: "light",
-      accent: "#0e7eaf",
-      accentTwo: "#b7cbd7"
-}   ;
+    const savedMode = localStorage.getItem('gregstockThemeMode');
+    const initialMode = savedMode === 'light' ? 'light' : 'dark';
+    root.dataset.theme = initialMode;
+    themeToggle.textContent = initialMode === 'dark' ? 'Dark' : 'Light';
 
-    function hexToRgb(hex) {
-      const cleanHex = hex.replace('#', '');
-      const value = parseInt(cleanHex, 16);
-      return `${(value >> 16) & 255}, ${(value >> 8) & 255}, ${value & 255}`;
-    }
-
-    function getSavedTheme() {
-      const savedTheme = localStorage.getItem('gregstockTheme');
-
-      if (!savedTheme) {
-        return defaultTheme;
-      }
-
-      try {
-        return { ...defaultTheme, ...JSON.parse(savedTheme) };
-      } catch {
-        return defaultTheme;
-      }
-    }
-
-    function applyTheme(theme) {
-      root.dataset.theme = theme.mode;
-      root.style.setProperty('--accent', theme.accent);
-      root.style.setProperty('--accent-2', theme.accentTwo);
-      root.style.setProperty('--accent-rgb', hexToRgb(theme.accent));
-      root.style.setProperty('--accent-2-rgb', hexToRgb(theme.accentTwo));
-
-      accentPicker.value = theme.accent;
-      accentTwoPicker.value = theme.accentTwo;
-
-      localStorage.setItem('gregstockTheme', JSON.stringify(theme));
-    }
-
-    let currentTheme = getSavedTheme();
-    applyTheme(currentTheme);
-
-    accentPicker.addEventListener('input', (event) => {
-      currentTheme = { ...currentTheme, accent: event.target.value };
-      applyTheme(currentTheme);
-    });
-
-    accentTwoPicker.addEventListener('input', (event) => {
-      currentTheme = { ...currentTheme, accentTwo: event.target.value };
-      applyTheme(currentTheme);
-    });
-
-    darkModeButton.addEventListener('click', () => {
-      currentTheme = { ...currentTheme, mode: 'dark' };
-      applyTheme(currentTheme);
-    });
-
-    lightModeButton.addEventListener('click', () => {
-      currentTheme = { ...currentTheme, mode: 'light' };
-      applyTheme(currentTheme);
-    });
-
-    resetThemeButton.addEventListener('click', () => {
-      currentTheme = { ...defaultTheme };
-      localStorage.removeItem('gregstockTheme');
-      applyTheme(currentTheme);
+    themeToggle.addEventListener('click', () => {
+      const nextMode = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = nextMode;
+      themeToggle.textContent = nextMode === 'dark' ? 'Dark' : 'Light';
+      localStorage.setItem('gregstockThemeMode', nextMode);
     });
   </script>
 </body>
