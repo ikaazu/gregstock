@@ -406,7 +406,8 @@
       display: block;
     }
 
-    .github-icon svg {
+    .github-icon svg,
+    .bluesky-icon svg {
       width: 24px;
       height: 24px;
       fill: currentColor;
