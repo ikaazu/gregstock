@@ -13,6 +13,23 @@
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <meta name="theme-color" content="#0b0d12">
   <style>
+    .back-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.72rem;
+      transition: 160ms ease;
+    }
+
+    .back-pill:hover {
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), 0.4);
+    }
+
     .updates-list {
       display: flex;
       flex-direction: column;
@@ -68,7 +85,7 @@
         </span>
       </a>
       <div class="nav-right">
-        <a class="archive-link mono-label" href="index.html">&#8592; Back to site</a>
+        <a class="back-pill mono-label" href="index.html">&#8592; Back to site</a>
         <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
       </div>
     </div>
