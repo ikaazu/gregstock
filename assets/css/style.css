@@ -411,7 +411,8 @@ section + section {
   font-size: 0.95rem;
 }
 
-#about .section-heading {
+#about .section-heading,
+#projects .section-heading {
   justify-content: flex-end;
 }
 
