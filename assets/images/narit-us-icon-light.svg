@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Narit.us orbital N icon — for light backgrounds</title>
+  <desc id="desc">A rounded retro-futurist N crossed by a bright cyan horizontal orbit with a cyan planet.</desc>
+  <g fill="none" stroke="#00B8F0" stroke-width="20" stroke-linecap="round">
+    <ellipse cx="256" cy="286" rx="224" ry="76"/>
+  </g>
+  <path d="M164 0H70V700H317Q441 700 502.0 644.5Q563 589 563 470V0H469V483Q469 551 427.5 581.5Q386 612 318 612H164Z" transform="translate(86 430) scale(0.54 -0.54)" fill="#061B3A"/>
+  <circle cx="402" cy="240" r="24" fill="#00B8F0" stroke="#061B3A" stroke-width="8"/>
+</svg>
